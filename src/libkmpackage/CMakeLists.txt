@@ -1,0 +1,22 @@
+SET( TARGET_BASE_NAME "kmpackage" )
+
+SET(BASE_SOURCE_PATH ".")
+
+SET ( LIB_SRCS
+	${BASE_SOURCE_PATH}/Package.cpp
+)
+SET ( LIB_INCS
+	${BASE_INCLUDE_PATH}/KarMac/Lib/KMPackage/Package.h
+	${BASE_INCLUDE_PATH}/KarMac/Lib/KMPackage/FileDef.h
+	
+	${BASE_INCLUDE_PATH}/KarMac/exception.h
+	${BASE_INCLUDE_PATH}/KarMac/shared_ptr.h
+)
+
+ADD_LIBRARY(${TARGET_BASE_NAME} STATIC ${LIB_SRCS} ${LIB_INCS})
+
+TARGET_LINK_LIBRARIES ( ${TARGET_BASE_NAME}
+  ${FluidSynth_LIBRARY}
+  ${CMAKE_THREAD_LIBS_INIT}
+  ${CMAKE_DL_LIBS}
+)
