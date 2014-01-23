@@ -3,10 +3,11 @@ SET( TARGET_BASE_NAME "kmpackage" )
 SET(BASE_SOURCE_PATH ".")
 
 SET ( LIB_SRCS
-	${BASE_SOURCE_PATH}/Package.cpp
+	${BASE_SOURCE_PATH}/Package.cpp ${BASE_SOURCE_PATH}/PackageEditor.cpp
 )
 SET ( LIB_INCS
 	${BASE_INCLUDE_PATH}/KarMac/Lib/KMPackage/Package.h
+	${BASE_INCLUDE_PATH}/KarMac/Lib/KMPackage/PackageEditor.h
 	${BASE_INCLUDE_PATH}/KarMac/Lib/KMPackage/FileDef.h
 	
 	${BASE_INCLUDE_PATH}/KarMac/exception.h

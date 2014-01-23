@@ -58,3 +58,4 @@ FIND_PACKAGE(FluidSynth REQUIRED)
 
 #-----------------------------------------------------------------------------
 add_subdirectory(src)
+add_subdirectory(tests)
